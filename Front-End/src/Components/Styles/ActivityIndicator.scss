@@ -1,0 +1,13 @@
+@import '../Styles/Modules/Spinners.scss';
+
+.activity-indicator {
+  @include spinner($brand-color, background rgba(0, 0, 0, 0.2), 50px);
+
+  &.medium {
+    @include spinner($brand-color, background rgba(0, 0, 0, 0.2), 30px);
+  }
+
+  &.small {
+    @include spinner($brand-color, background rgba(0, 0, 0, 0.2));
+  }
+}

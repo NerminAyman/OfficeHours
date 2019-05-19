@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./models/Account",
+      "./models/Card",
+      "./models/Comment",
+      "./models/Rating",
+      "./models/Meeting",
+      "./models/Question",
+      "./models/Tag",
+      "./models/Answer"
+    ],
+    "mixins": [
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../node_modules/loopback-ds-readonly-mixin/lib",
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "MongoDB",
+    "public": false,
+    "relations": {
+      "account": {
+        "type": "belongsTo",
+        "model": "Account",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "MongoDB",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "Rating": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Comment": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Card": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Meeting": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Account": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Tag": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Answer": {
+    "dataSource": "MongoDB",
+    "public": true
+  }
+}

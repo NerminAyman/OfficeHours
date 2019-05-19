@@ -1,0 +1,17 @@
+/*
+ * Overwriting The Grommet Menus Styling
+ */
+
+
+nav.grommetux-menu, nav.grommetux-menu__contents {
+  & > a.grommetux-anchor {
+    color: $brand-link-color;
+    opacity: 0.5;
+    font-weight: 600;
+
+    &.active {
+      color: $brand-color;
+      opacity: 1;
+    }
+  }
+}

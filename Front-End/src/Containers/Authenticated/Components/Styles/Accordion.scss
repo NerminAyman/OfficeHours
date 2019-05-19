@@ -1,0 +1,68 @@
+.grommetux-list.grommetux-accordion {
+  overflow-x: hidden;
+}
+
+.grommetux-box.grommetux-collapsible {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-top: 1px solid #C1C1C1;
+  padding-bottom: 25px;
+
+  .section-title {
+    font-weight: bold;
+  }
+}
+.grommetux-list-item.grommetux-accordion-panel {
+  font-weight: bold;
+  color: #4A4A4A;
+  margin: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+
+  .title {
+    min-width: 20%;
+  }
+
+  .desc {
+    font-weight: normal;
+    opacity: 0.7;
+    font-size: 18px;
+  }
+
+  svg {
+    display: none;
+  }
+
+  button {
+    & > .grommetux-box {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      header {
+        flex: 1;
+      }
+
+      .open-placeholder {
+        color: #3B99FC;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &.grommetux-accordion-panel--active {
+    display: none;
+  }
+}

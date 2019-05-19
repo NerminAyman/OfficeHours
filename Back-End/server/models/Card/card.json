@@ -1,0 +1,74 @@
+{
+  "name": "Card",
+  "plural": "Cards",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "accountID": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "questionID": {
+      "type": "string"
+    },
+    "information": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "field": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array"
+    }
+  },
+  "scope": {
+    "order": "updatedAt DESC"
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "accountID"
+    },
+    "question": {
+      "type": "hasOne",
+      "model": "Question",
+      "foreignKey": "questionID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

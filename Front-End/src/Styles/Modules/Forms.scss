@@ -1,0 +1,118 @@
+/*
+ * Overwriting The Grommet Forms Styling
+ */
+
+
+div.grommetux-form-field {
+  border: 0;
+  margin-bottom: 10px;
+  background-color: transparent;
+
+  .grommetux-form-field__label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: $brand-link-color;
+    font-weight: bold;
+  }
+
+  .grommetux-form-field__contents {
+    margin-left: 0;
+    margin-right: 0;
+
+    input.grommetux-input {
+      border: 1px solid #BDC7D8;
+      padding: 0 10px;
+      height: 54px;
+      font-size: 18px;
+      border-radius: 3px;
+      background-color: #fff;
+
+      &:focus {
+        border-color: $brand-color;
+      }
+    }
+
+    .grommetux-password-input {
+      display: flex;
+      border: 1px solid #BDC7D8;
+      border-radius: 3px;
+
+      input {
+        flex: 1;
+        border: 0;
+
+        &:focus {
+          outline: 0;
+          border: 1px solid $brand-color;
+          border-right: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  &.grommetux-form-field--error {
+    .grommetux-form-field__error {
+      color: map-get($brand-status-colors, error);
+      font-weight: bold;
+    }
+
+    .grommetux-form-field__label {
+
+    }
+
+    .grommetux-form-field__contents {
+      input.grommetux-input {
+        border-color: map-get($brand-status-colors, error);
+      }
+
+      .grommetux-password-input {
+        border-color: map-get($brand-status-colors, error);
+        input {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-form-wrapper {
+  form.dashboard-form {
+    padding-right: 60px;
+    .grommetux-form-field {
+      display: flex;
+      align-items: flex-start;
+      padding-left: 0;
+      padding-right: 0;
+
+      .grommetux-form-field__contents {
+        margin-left: 20px;
+
+        .grommetux-form-field__error {
+          color: map-get($brand-status-colors, error);
+          font-weight: bold;
+          margin-top: 5px;
+          min-height: 24px
+        }
+      }
+
+      input.grommetux-text-input.grommetux-input {
+        min-width: 300px;
+        height: 45px;
+      }
+
+      .grommetux-form-field__label {
+        min-width: 120px;
+        font-weight: bold;
+        opacity: 0.7;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  footer.grommetux-footer {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #C1C1C1;
+  }
+}

@@ -1,0 +1,10 @@
+.circle {
+  border-radius: 100%;
+}
+
+.loading-bar {
+  z-index: 1000;
+  background-color: $brand-color;
+  height: 3px;
+  position: fixed;
+}

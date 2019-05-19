@@ -1,0 +1,40 @@
+{
+  "name": "Rating",
+  "plural": "Ratings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "userID": {
+      "type": "string",
+      "required": true
+    },
+    "rate": {
+      "type": "number",
+      "required": true,
+      "default": 5
+    }
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "userID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

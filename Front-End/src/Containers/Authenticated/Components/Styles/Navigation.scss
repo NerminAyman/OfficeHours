@@ -1,0 +1,41 @@
+.navigation-wrapper {
+  margin-top: 120px;
+  margin-right: 30px;
+
+  .navigation-widget {
+    margin-bottom: 60px;
+    .grommetux-heading {
+      margin-left: 50px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #898989;
+    }
+
+    nav.grommetux-menu, nav.grommetux-menu__contents {
+      & > a.grommetux-anchor {
+        color: $brand-link-color;
+        opacity: 1;
+        padding: 8px;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        border: 1px solid transparent;
+        padding-right: 25px;
+
+        img {
+          margin-right: 10px;
+          width: 24px;
+        }
+
+        &.active{
+          background-color: #fff;
+          border-color: #CCCCCC;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: #fff;
+          border-color: #CCCCCC;
+        }
+      }
+    }
+  }
+}

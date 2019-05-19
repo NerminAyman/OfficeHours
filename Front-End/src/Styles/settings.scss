@@ -1,0 +1,21 @@
+// Settings file
+
+// ================ Brand Colors ===============
+$brand-color: #3B99FC;
+$brand-neutral-colors: (#2F7AC9, #F9FAFC);
+$brand-accent-colors: (#969CAF);
+$brand-link-color: #4A4A4A;
+$brand-status-colors: (
+  critical: #FE6258,
+  warning: #F5A623,
+  ok: #19B379,
+  unknown: #a8a8a8,
+  disabled: #a8a8a8
+) !default;
+$brand-grey-colors: (#969CAF, #C0C3CE, #3B3B3B, #434343, #666666, #F8FAFC, #D5DCE7, #E6E7F2);
+
+$button-secondary-color: nth($brand-neutral-colors, 2);
+
+// ================ Brand Fonts ===============
+
+$font-proxima: 'Proxima Nova';

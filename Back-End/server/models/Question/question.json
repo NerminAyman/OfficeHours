@@ -1,0 +1,54 @@
+{
+  "name": "Question",
+  "plural": "Questions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "requireMeeting": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "expertID": {
+      "type": "string",
+      "required": true
+    },
+    "expertID2": {
+      "type": "string"
+    },
+    "expertID3": {
+      "type": "string"
+    },
+    "senderID": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+     "account": {
+        "type": "belongsTo",
+        "model": "Account",
+        "foreignKey": "expertID"
+      }
+    },
+  "acls": [],
+  "methods": {}
+}

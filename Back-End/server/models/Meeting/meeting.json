@@ -1,0 +1,65 @@
+{
+  "name": "Meeting",
+  "plural": "Meetings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "meetingtitle": {
+      "type": "string",
+      "required": true
+    },
+    "meetingfinaltiming": {
+      "type": "string"
+    },
+    "expertID": {
+      "type": "string",
+      "required": true
+    },
+    "clientID": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "pending"
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "dateRequestOne": {
+      "type": "string",
+      "required": true
+    },
+    "dateRequestTwo": {
+      "type": "string",
+      "required": true
+    },
+    "dateRequestThree": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

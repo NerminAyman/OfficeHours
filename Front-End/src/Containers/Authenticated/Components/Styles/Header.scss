@@ -1,0 +1,10 @@
+header:not(.grommetux-accordion-panel__header) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  padding-left: 25px;
+  border-bottom: 1px solid #F2F2F2;
+  margin-bottom: 20px;
+}

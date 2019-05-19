@@ -1,0 +1,39 @@
+{
+  "name": "Answer",
+  "plural": "Answers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "answer": {
+      "type": "string",
+      "required": true
+    },
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "clientID": {
+      "type": "string",
+      "required": true    
+    }
+  },
+  "validations": [],
+  "relations": {
+    },
+
+  "acls": [],
+  "methods": {}
+}

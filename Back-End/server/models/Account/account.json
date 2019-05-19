@@ -1,0 +1,60 @@
+{
+  "name": "Account",
+  "plural": "Accounts",
+  "base": "User",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "field": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "array"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rating": {
+      "type": "hasMany",
+      "model": "Rating",
+      "foreignKey": "expertID"
+    },
+    "card": {
+      "type": "hasMany",
+      "model": "Card",
+      "foreignKey": "accountID"
+    },
+    "comment": {
+      "type": "hasMany",
+      "model": "Comment",
+      "foreignKey": "expertID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

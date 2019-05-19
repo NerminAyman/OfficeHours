@@ -1,0 +1,10 @@
+{
+  "MongoDB": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "OfficeHoursMasterDB",
+    "name": "MongoDB",
+    "allowExtendedOperators": true,
+    "connector": "mongodb"
+  }
+}

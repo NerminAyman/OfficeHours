@@ -1,0 +1,51 @@
+{
+  "name": "Comment",
+  "plural": "Comments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "ActionStamp": true,
+    "ReadOnly": {
+      "createdAt": true,
+      "updatedAt": true,
+      "createdBy": true,
+      "updatedBy": true
+    }
+  },
+  "properties": {
+
+    "Rating": {
+      "type": "number",
+      "required": true,
+      "default": 5
+    },
+    "Report": {
+      "type": "number",
+      "required": true,
+      "default":0
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "UserID": {
+      "type": "string",
+      "required": true
+    }
+
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "UserID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

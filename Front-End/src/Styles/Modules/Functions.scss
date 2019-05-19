@@ -1,0 +1,36 @@
+@mixin Animate--ButtonToCircle($name, $width, $height, $size: false) {
+  @keyframes #{$name} {
+    from {
+      width: #{$width}px;
+      height: #{$height}px;
+      border-radius: 4px;
+    }
+
+    to {
+      width: #{$size or $height}px;
+      height: #{$size or $height}px;
+      border-radius: 50px;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+      border-color: rgba(0,0,0,0.2);
+    }
+  }
+}
+
+@mixin Animate--CircleToButton($name, $width, $height, $size: false) {
+  @keyframes #{$name} {
+    from {
+      width: #{$size or $height}px;
+      height: #{$size or $height}px;
+      border-radius: 50px;
+      padding: 0;
+    }
+
+    to {
+      width: #{$width}px;
+      height: #{$height}px;
+      border-radius: 4px;
+    }
+  }
+}
