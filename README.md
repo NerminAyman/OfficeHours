@@ -43,6 +43,10 @@
 
 **Website Link: https://riseup.herokuapp.com/**
 
+**Languages Used:**
+
+Front-End: React js, Back-End: Loopback
+
 **Software Engineering Course**.
 
 **The Team Members Are _Engineering Students_.**
